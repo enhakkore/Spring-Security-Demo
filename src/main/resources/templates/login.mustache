@@ -1,0 +1,14 @@
+{{>layout/header}}
+
+<h1>로그인 페이지</h1>
+<hr>
+<form action="/user/login" method="post">
+    <input type="hidden" name={{_csrf.parameterName}} value={{_csrf.token}}>
+    <label for="email">이메일</label>
+    <input type="text" name="username" id="email" placeholder="이메일을 입력해주세요">
+    <label for="password">비밀번호</label>
+    <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요">
+    <button type="submit">로그인</button>
+</form>
+
+{{>layout/footor}}

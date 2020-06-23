@@ -1,0 +1,22 @@
+{{>layout/header}}
+
+<h1>메인 페이지</h1>
+<hr>
+{{^isLoggedIn}}
+    <a href="/user/login">로그인</a>
+    <a href="/user/signUp">회원가입</a>
+{{/isLoggedIn}}
+
+{{#isLoggedIn}}
+    <a href="/user/logout">로그아웃</a>
+{{/isLoggedIn}}
+
+{{#isAdmin}}
+    <a href="/admin">관리 페이지</a>
+{{/isAdmin}}
+
+{{#isMember}}
+    <a href="/user/myInfo">MyPage</a>
+{{/isMember}}
+
+{{>layout/footor}}
